@@ -221,7 +221,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .container .box .news .news-nav {
-  background: url(/BTH_05/images/news-header-bg.png) center center / cover
+  background: url(https://doan201203.github.io/bth-05/BTH_05/images/news-header-bg.png) center center / cover
     no-repeat;
   background-position: center center;
   display: flex;
@@ -343,7 +343,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .footer {
-  background: url(/BTH_05/images/bg-bottom.jpg) center center / cover no-repeat;
+  background: url(https://doan201203.github.io/bth-05/BTH_05/images/bg-bottom.jpg) center center / cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
