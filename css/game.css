@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -9,8 +8,6 @@
   outline: none;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
   list-style: none;
 }
 
@@ -134,19 +131,24 @@ html::-webkit-scrollbar-thumb {
 .content {
   align-items: center;
   display: flex;
-  /* justify-content: center; */
   cursor: pointer;
   margin-top: -40rem;
   position: relative;
   background-color: var(--blue-bg);
-  width: 112rem;
-  padding: 1rem 3rem 1rem 1rem;
-  margin-right: auto;
+  width: 98.5rem;  padding-left: .5rem;  margin-right: auto;
   margin-left: auto;
+  position: relative;
+}
+
+.content .lanterns{
+  position: absolute;
+  top: 0rem;
+  left: -7.5rem;
 }
 
 .content .content-right .content-right-top {
-  height: 14rem;
+  margin-top: .5rem;
+  height: 11.5rem;
   width: 100%;
 }
 
@@ -157,36 +159,92 @@ html::-webkit-scrollbar-thumb {
 }
 
 .content .content-right .content-right-bottom {
-  width: 27.6rem;
-  margin-top: 0.5rem;
+  background: url(../images/buttons-left.png) no-repeat;
+  width: 24rem;
+  height: 7rem;
+  background-position: left 0.5rem;
+  display: block;
 }
 
-.content .content-right .content-right-bottom img {
-  width: 100%;
-  object-fit: cover;
+.content .content-right .content-right-bottom:hover {
+  background-position: right 0.5rem;
 }
 
-.content .content-mid {
-  height: 29.5rem;
-  margin: 0 1rem;
+.content .content-right .content-right-bottom-bottom {
+  background: url(../images/buttons-left.png) no-repeat;
+  width: 24rem;
+  height: 6.5rem;
+  display: block;
+  background-position: left -7rem;
 }
 
-.content .content-mid img {
+.content .content-right .content-right-bottom-bottom:hover {
+  background-position: right -7rem;
+}
+
+.content .slider {
+  height: 100%;
+  margin: 0 .5rem;
+}
+
+.content .swiper {
+  width: 145rem;
+}
+
+.content .slider img {
   height: 100%;
   object-fit: cover;
 }
 
-.content .content-left .content-left-top {
-  height: 25.3rem;
+.content .content-left{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: .5rem;
 }
 
-.content .content-left .content-left-top img {
-  height: 100%;
-  object-fit: cover;
+.content .content-left .content-left-top-4,
+.content .content-left .content-left-top-3,
+.content .content-left .content-left-top-2,
+.content .content-left .content-left-top-1 {
+  background: url(../images/buttons-right.png) no-repeat;
+  width: 11.5rem;
+  height:11.3rem;
+}
+
+.content .content-left .content-left-top-1:hover {
+  background: url(../images/event-link-hover.png);
+}
+
+.content .content-left .content-left-top-2 {
+  background-position: top right -2rem;
+}
+
+.content .content-left .content-left-top-2:hover {
+  background: url(../images/event-link-hover.png);
+  background-position: top right -2rem;
+}
+
+.content .content-left .content-left-top-3 {
+  background-position: bottom left;
+}
+
+.content .content-left .content-left-top-3:hover{
+  background: url(../images/event-link-hover.png);
+  background-position: bottom left;
+}
+
+.content .content-left .content-left-top-4 {
+  background-position: bottom right -2rem;
+}
+
+.content .content-left .content-left-top-4:hover {
+  background: url(../images/event-link-hover.png);
+  background-position: bottom right -2rem;
 }
 
 .content .content-left .content-left-bottom {
-  width: 28rem;
+  width: 21rem;
   margin-top: 0.5rem;
 }
 
@@ -198,30 +256,51 @@ html::-webkit-scrollbar-thumb {
 .container {
   display: flex;
   margin-top: 0.5rem;
-  margin-left: 10rem;
+  margin-left: 7.9rem;
 }
 
 .container .box {
   margin-right: 0.5rem;
 }
 
-.container .box .gift {
-  margin-left: 19rem;
-  width: 83rem;
+.container .box .gift{
+  display: flex;
+  row-gap: 1rem;
+  margin-left: 27.8rem;
+  align-items: center;
+  margin-bottom: .5rem;
+  justify-content: center;
 }
 
-.container .box .gift img {
-  width: 100%;
+.container .box .gift .gift-img-1,
+.container .box .gift .gift-img-2,
+.container .box .gift .gift-img-3 {
+  background: url(../images/cuuamlenh-vip-giftcode.png) no-repeat;
+  width: 24.8rem;
+  height: 8rem;
 }
+
+.container .box .gift .gift-img-1{
+
+}
+
+.container .box .gift .gift-img-2{
+background-position: center;
+}
+
+.container .box .gift .gift-img-3{
+  background-position: right;
+}
+
 
 .container .box .news {
-  width: 83rem;
+  width: 74.3rem;
   border-top: none;
-  margin-left: 19rem;
+  margin-left: 27.8rem;
 }
 
 .container .box .news .news-nav {
-  background: url(https://doan201203.github.io/bth-05/BTH_05/images/news-header-bg.png) center center / cover
+  background: url(../images/news-header-bg.png) center center / cover
     no-repeat;
   background-position: center center;
   display: flex;
@@ -245,14 +324,64 @@ html::-webkit-scrollbar-thumb {
 
 .container .mission {
   background-color: var(--blue-bg);
-  width: 28rem;
   padding: 0.5rem;
-  height: 29rem;
+  width: 23.7rem;
+  row-gap: .5rem;
+  display: grid;
+  height: 28.5rem
 }
 
-.container .mission img {
-  width: 100%;
-  height: 100%;
+.container .mission .mission-5,
+.container .mission .mission-4,
+.container .mission .mission-3, 
+.container .mission .mission-2,
+.container .mission .mission-1{
+  background: url(../images/links-right.png) no-repeat;
+  width: 23rem;
+  display: block;
+  height: 5rem;
+}
+
+.container .mission .mission-1:hover{
+  background: url(../images/option-link-hover.png) no-repeat;
+}
+
+.container .mission .mission-2{
+  background-position: center -6rem;
+}
+
+.container .mission .mission-2:hover{
+  background: url(../images/option-link-hover.png) no-repeat;
+  background-position: center;
+
+}
+
+.container .mission .mission-3{
+  background-position: center -12rem;
+}
+
+.container .mission .mission-3:hover{
+  background: url(../images/option-link-hover.png) no-repeat;
+  background-position: bottom;
+}
+
+.container .mission .mission-4{
+  background-position: center -17rem;
+}
+
+.container .mission .mission-4:hover{
+  background: url(../images/option-link2-hover.png) no-repeat;
+  background-position: center 0.12rem;
+}
+
+.container .mission .mission-5{
+  background-position: center -22.5rem;
+}
+
+.container .mission .mission-5:hover{
+  background: url(../images/option-link1-hover.png) no-repeat;
+  background-position: center;
+
 }
 
 .container .box .news .news-container {
@@ -282,7 +411,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .container .box .news .news-container .news-box .box-content {
-  flex: 1 1 45rem;
+  flex: 1 1 26rem;
 }
 
 .container .box .news .news-container .news-box .box-content h3 {
@@ -295,11 +424,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .container .box .news .news-container .news-box .box-content h3:hover {
-  color: #ccc;
   cursor: pointer;
-  border-left: #ccc;
-
-  font-style: italic;
 }
 
 .container .box .news .news-container .news-box .box-content span {
@@ -309,6 +434,12 @@ html::-webkit-scrollbar-thumb {
 
 .container .box .news .news-container .news-box .box-content .time {
   color: red;
+}
+
+.container .box .news .news-container .news-box .box-content:hover .time {
+  margin-left: .5rem;
+  cursor: pointer;
+  transition: .2s;
 }
 
 .container .box .news .news-container .news-box .box-content p {
@@ -325,25 +456,22 @@ html::-webkit-scrollbar-thumb {
 }
 
 .container .box .news .news-container .news-btn a {
-  padding: 0.8rem 2.5rem;
+  padding: 0.5rem 1rem;
   border: 0.2rem solid #ccc;
   background-color: var(--blue-bg);
   color: #fff;
   cursor: pointer;
   text-transform: capitalize;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .container .box .news .news-container .news-btn a i {
   margin: 0 0.5rem;
 }
 
-.container .box .news .news-container .news-btn:hover .btn-up i {
-  margin-top: 1rem;
-}
 
 .footer {
-  background: url(https://doan201203.github.io/bth-05/BTH_05/images/bg-bottom.jpg) center center / cover no-repeat;
+  background: url(../images/bg-bottom.jpg) center center / cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
